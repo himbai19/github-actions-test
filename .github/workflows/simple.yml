@@ -27,3 +27,11 @@ jobs:
       - name: Directory Bash
         shell: bash
         run: pwd
+  
+  run-python-commands:
+    runs-on: ubuntu-latest
+    needs: [run-shell-commands]
+    steps:
+      - name: Print Hello World
+        shell: python
+        run: print(Hello World)
