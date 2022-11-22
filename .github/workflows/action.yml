@@ -19,7 +19,7 @@ jobs:
           curl \
             -X POST \
             -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer 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" \
+            -H "Authorization: ${{ secrets.REPO_TOKEN }}" \
             https://api.github.com/repos/himbai19/github-actions-test/dispatches \
             -d '{"event_type":"build","client_payload":{"unit":false,"integration":true}}'
       - name: List Files
