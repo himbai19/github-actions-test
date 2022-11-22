@@ -22,6 +22,8 @@ jobs:
       #      -H "Authorization: Bearer ${{ secrets.REPO_TOKEN }}" \
       #      https://api.github.com/repos/himbai19/github-actions-test/dispatches \
       #      -d '{"event_type":"build","client_payload":{"unit":false,"integration":true}}'
+      - name: Payload
+        run: echo ${{ github.event.client_payload.env }}
       - name: List Files
         run: |
           pwd
